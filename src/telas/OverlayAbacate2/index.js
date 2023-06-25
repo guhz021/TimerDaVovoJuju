@@ -26,7 +26,7 @@ export default function BemVindo() {
         </View>
 
         <TouchableOpacity style={styles.desistir}
-            onPress={ () => navigation.navigate('Home') }>
+            onPress={ () => navigation.navigate('Home')}>
             <Text style={styles.desistirText}>Desistir</Text> 
         </TouchableOpacity>
 

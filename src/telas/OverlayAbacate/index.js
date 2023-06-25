@@ -19,13 +19,6 @@ export default function BemVindo() {
             <Text style={styles.texto1}> Para que servem os Abacates?</Text>
         </View>
 
-
-        <TouchableOpacity style={styles.fechar}
-            onPress={ () => navigation.navigate('OverlayAbacate2') }>
-            <Text>aqui</Text>
-        </TouchableOpacity>
-
-
         <View>
             <Text style={styles.texto2}>Além de fazer bem e deixar o cabelo{'\n'} bonito,{'\n'}
                 os abacates servem como moedas, ou{'\n'} seja, 

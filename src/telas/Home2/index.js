@@ -45,7 +45,7 @@ import {gestureHandlerRootHOC} from 'react-native-gesture-handler'
     const bottomSheetRef = useRef(null);
 
     return (
-    <animatable.View animation="fadeInUp"style={styles.container}>
+    <animatable.View animation="fadeInUp" style={styles.container}>
         
         <TouchableOpacity style={styles.containerAbacates}
             onPress={ () => navigation.navigate('OverlayAbacate') }>
@@ -58,11 +58,12 @@ import {gestureHandlerRootHOC} from 'react-native-gesture-handler'
                 <TouchableOpacity onPress={() =>{
                     bottomSheetRef.current?.expand()
                 }}>
-                <Image style={styles.IMG2}source={require('../../assets/Vovo_Juju.png')}></Image> 
+                <Image style={styles.IMG2}source={require('../../assets/MCjuju.png')}></Image> 
                 </TouchableOpacity>
             </animatable.View>
 
-        <animatable.View animation="fadeInLeft" delay={350}  style={styles.relogio}>
+
+        <animatable.View animation="fadeInLeft" delay={350} style={styles.relogio}>
             <Text style={styles.textoRelogio}>
             {minutes <10 ? "0" + minutes :minutes}:
             {seconds <10 ? "0" + seconds :seconds}
@@ -88,20 +89,20 @@ import {gestureHandlerRootHOC} from 'react-native-gesture-handler'
                 <Text style={styles.buttons}>clear</Text>
             </TouchableOpacity> 
         
-        <BottomSheet ref={bottomSheetRef} index={-1} snapPoints={[1,'48%']}
+        <BottomSheet ref={bottomSheetRef} index={1} snapPoints={[1,'48%']}
          backgroundStyle={{backgroundColor:'#B4908C',borderRadius:50}} 
          handleIndicatorStyle={{backgroundColor:"#5A312C",width:118,height:8,marginTop:14}}>
             <View style={styles.BottomSheet1}>
 
                 <View style={styles.vovo1}>
+                <TouchableOpacity onPress={ () => navigation.navigate('Home') }>
                 <Image style={styles.IMGvovo1} source={require('../../assets/vovo1.png')}></Image>
+                </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity onPress={ () => navigation.navigate('Home2') }>
                 <View style={styles.vovo2}>
                 <Image style={styles.IMGvovo2} source={require('../../assets/vovo2.png')}></Image>
                 </View>
-                </TouchableOpacity>
 
                 <View style={styles.vovo3}>
                 <TouchableOpacity onPress={ () => navigation.navigate('Home3') }>
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
 
     },    
     containerVovo:{
-        backgroundColor:'#CDDECA',
+        backgroundColor:'#DEC3B4',
         width:210,
         height:210,
         marginTop: 187.5,
@@ -163,6 +164,7 @@ const styles = StyleSheet.create({
         width:168,
         height:238,
         marginBottom : 35,   
+        marginLeft: 20
     },
     relogio:{
         width:154,
